@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2ACCC01-0D0D-4907-A93D-38EAE2B06D6D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PMDataOperation</RootNamespace>
+    <AssemblyName>PMDataOperation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelBasicAnalysis">
+      <HintPath>.\ExcelBasicAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite.CodeFirst, Version=1.3.1.18, Culture=neutral, PublicKeyToken=eb96ba0a78d831a7, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLite.CodeFirst.1.3.1.18\lib\net45\SQLite.CodeFirst.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.105.1\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.105.1, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.105.1\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAnalysis\MR\analysis2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAnalysis\MR\analysis2.designer.cs">
+      <DependentUpon>analysis2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAnalysis\MR\query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAnalysis\MR\query.designer.cs">
+      <DependentUpon>query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAnalysis\PM\IndexParameterFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAnalysis\PM\IndexParameterFrom.designer.cs">
+      <DependentUpon>IndexParameterFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataShow\MR\Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataShow\MR\Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataShow\PM\PMDataShowPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataShow\PM\PMDataShowPage.Designer.cs">
+      <DependentUpon>PMDataShowPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDate\MR\DataToDb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDate\MR\DataToDb.designer.cs">
+      <DependentUpon>DataToDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataShow\MR\MRShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataShow\MR\MRShow.designer.cs">
+      <DependentUpon>MRShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbManagement\createdb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbManagement\dbInit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DbManagement\dbInit.designer.cs">
+      <DependentUpon>dbInit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDate\PM\PMIntoDb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDate\PM\PMIntoDb.Designer.cs">
+      <DependentUpon>PMIntoDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DataAnalysis\MR\analysis2.resx">
+      <DependentUpon>analysis2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAnalysis\MR\query.resx">
+      <DependentUpon>query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAnalysis\PM\IndexParameterFrom.resx">
+      <DependentUpon>IndexParameterFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataShow\MR\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataShow\PM\PMDataShowPage.resx">
+      <DependentUpon>PMDataShowPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputDate\MR\DataToDb.resx">
+      <DependentUpon>DataToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataShow\MR\MRShow.resx">
+      <DependentUpon>MRShow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbManagement\createdb.resx">
+      <DependentUpon>createdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DbManagement\dbInit.resx">
+      <DependentUpon>dbInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputDate\PM\PMIntoDb.resx">
+      <DependentUpon>PMIntoDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\LROSE_BLL\LROSE_BLL.csproj">
+      <Project>{72FCC0F6-8455-41EB-9F86-34151CC16EA2}</Project>
+      <Name>LROSE_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LROSE_DAL\LROSE_DAL.csproj">
+      <Project>{03FCEACA-E54A-4E90-90E8-6DFA89FDEA73}</Project>
+      <Name>LROSE_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LROSE_Mode\LROSE_Model.csproj">
+      <Project>{095A519D-5B44-4195-9FC6-534AF464787B}</Project>
+      <Name>LROSE_Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.1\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.1\build\net40\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.105.1\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.105.1\build\net40\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.105.1\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.105.1\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.1\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.1\build\net451\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
